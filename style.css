@@ -1,0 +1,816 @@
+:root {
+  --primary-color: #01844f;
+  --secondary-color: #f3fff4;
+  --background-color: #000000;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--secondary-color);
+}
+
+/* Navbar */
+
+.navbar {
+  z-index: 3;
+  transition: background-color 0.3s ease;
+}
+
+* {
+  z-index: 2;
+}
+
+.accent-img {
+  z-index: 1;
+}
+
+.img-hero {
+  z-index: 1;
+}
+
+.nav-link {
+  font-size: 16px;
+  color: var(--primary-color);
+}
+.nav-link:hover {
+  color: #fff;
+  scale: 1.1;
+}
+
+.nav-link.active {
+  font-weight: 700;
+}
+
+/* Hero */
+
+#hero {
+  background: var(--secondary-color);
+  height: 100vh;
+  width: 100%;
+}
+
+.img-hero {
+  height: 100%;
+}
+
+.hero-tagline {
+  color: var(--primary-color);
+}
+.hero-tagline h1 {
+  font-weight: 700;
+  font-size: 64px;
+}
+.hero-tagline h2 {
+  font-weight: 500;
+  font-size: 35px;
+}
+.hero-tagline p {
+  font-size: 16px;
+  margin-bottom: 60px;
+  margin-top: 20px;
+  line-height: 30px;
+  width: 85%;
+}
+
+.button-lg-primary {
+  width: 237px;
+  height: 70px;
+  border-radius: 10px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-style: none;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* About Section */
+#about {
+  background-color: var(--secondary-color);
+}
+
+#about .about-text {
+  padding-top: 70px;
+  margin-bottom: 3rem;
+}
+
+#about h2 {
+  color: var(--primary-color);
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+#about h4 {
+  color: #000;
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
+#about p {
+  font-size: 16px;
+  line-height: 28px;
+  color: var(--primary-color);
+}
+
+#about .img-fluid {
+  width: 80%;
+  margin-left: 7rem; /* Tambahkan jarak ke kanan */
+}
+
+/* Project Section */
+
+#project {
+  background-image: url(assets/img/green-bg.png);
+  height: 120vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#project h2 {
+  font-size: 48px;
+  font-weight: 500;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+#project p {
+  font-size: 24px;
+  font-weight: 400;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  line-height: 1;
+}
+
+.project-title {
+  padding-top: 90px;
+}
+
+.projectbox-head {
+  gap: 10rem;
+}
+
+.project-box {
+  width: 350px;
+  height: 350px;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-box:hover {
+  background-color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-box .logo {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+/* Gallery Section */
+
+#gallery h2 {
+  color: var(--primary-color);
+  font-size: 48px;
+  font-weight: 500;
+}
+
+.card {
+  height: 480px;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px; /* Memberikan sedikit ruang di sekitar konten */
+  background-color: #fff;
+  border-radius: 10px;
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+    box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.card-body {
+  text-align: center;
+  width: 100%;
+}
+
+.card-body h4 {
+  color: #000;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.2rem; /* Perbaiki line-height */
+}
+
+.card-logo {
+  display: flex;
+  justify-content: center;
+  margin-top: auto; /* Membuat logo tetap di bawah */
+}
+
+.card-logo img {
+  max-width: 70%; /* Sesuaikan ukuran logo */
+  height: auto;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card:hover {
+  background: linear-gradient(
+    160deg,
+    var(--primary-color),
+    var(--primary-color),
+    var(--background-color)
+  );
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover .card-body h4 {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.card:hover img {
+  filter: brightness(0.8);
+  transition: filter 0.3s ease;
+}
+
+/* Contact Section */
+
+#contact {
+  background-image: url(assets/img/kontak.png);
+  margin-top: 100px;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#contact .overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#contact .container {
+  padding: 140px 0 140px 0;
+}
+
+#contact h3 {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 60px;
+  color: #fff;
+}
+
+#contact h6 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #fff;
+  margin: 19px 0 14px 0;
+}
+
+.kontak a {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #fff;
+  margin-left: 10px;
+  text-decoration: none;
+  width: 330px;
+  display: inline-block;
+}
+
+.company-link {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.card-maps iframe {
+  width: 570px;
+  height: 500px;
+}
+
+/* Footer */
+
+footer {
+  width: 100%;
+  height: 100px;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer a {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.copyright {
+  color: #fff;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+}
+
+/* Responsive Style */
+
+/* Max width 922px */
+@media (max-width: 922px) {
+  .hero-tagline h1 {
+    font-size: 48px;
+  }
+
+  .hero-tagline h2 {
+    font-size: 28px;
+  }
+
+  .hero-tagline p {
+    font-size: 14px;
+    margin-bottom: 40px;
+    margin-top: 15px;
+    line-height: 25px;
+    width: 90%;
+  }
+
+  .button-lg-primary {
+    width: 200px;
+    height: 60px;
+    font-size: 18px;
+  }
+
+  .img-hero {
+    height: 80%;
+  }
+
+  .accent-img {
+    width: 80%;
+    height: auto;
+  }
+  #about .about-text {
+    padding-top: 50px;
+    margin-bottom: 2rem;
+  }
+
+  #about h2 {
+    font-size: 30px;
+  }
+
+  #about h4 {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  #about p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  #about .img-fluid {
+    width: 70%;
+    margin-left: 4rem; /* Kurangi jarak ke kanan */
+  }
+  #about .about-text {
+    padding-top: 30px;
+    margin-bottom: 2rem;
+  }
+
+  #about h2 {
+    font-size: 28px;
+  }
+
+  #about h4 {
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+
+  #about p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  #about .img-fluid {
+    width: 80%;
+    margin-left: 0; /* Gambar diratakan ke tengah */
+  }
+
+  #about .text-center img {
+    margin-top: 20px;
+  }
+  #project h2 {
+    font-size: 36px;
+  }
+
+  #project p {
+    font-size: 20px;
+  }
+
+  .projectbox-head {
+    gap: 5rem;
+  }
+
+  .project-box {
+    width: 300px;
+    height: 300px;
+  }
+  #gallery h2 {
+    font-size: 36px;
+  }
+
+  .card {
+    height: 400px;
+    width: 20rem;
+  }
+
+  .card-body h4 {
+    font-size: 20px;
+  }
+  #contact .container {
+    padding: 100px 0 100px 0;
+  }
+
+  #contact h3 {
+    font-size: 35px;
+    line-height: 50px;
+  }
+
+  .card-maps iframe {
+    width: 100%;
+    height: 400px;
+  }
+}
+
+/* Max width 576px */
+@media (max-width: 576px) {
+  .hero-tagline {
+    text-align: center;
+  }
+
+  .hero-tagline h1 {
+    font-size: 36px;
+  }
+
+  .hero-tagline h2 {
+    font-size: 24px;
+  }
+
+  .hero-tagline p {
+    font-size: 14px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    line-height: 22px;
+    width: 100%;
+  }
+
+  .button-lg-primary {
+    width: 180px;
+    height: 55px;
+    font-size: 16px;
+  }
+
+  .img-hero {
+    height: 70%;
+  }
+
+  .accent-img {
+    width: 70%;
+    height: auto;
+  }
+  #project h2 {
+    font-size: 28px;
+  }
+
+  #project p {
+    font-size: 18px;
+  }
+
+  .project-title {
+    padding-top: 50px;
+  }
+
+  .projectbox-head {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .project-box {
+    width: 250px;
+    height: 250px;
+  }
+
+  .project-box .logo {
+    max-width: 70%;
+    max-height: 70%;
+  }
+  #gallery h2 {
+    font-size: 28px;
+  }
+
+  .d-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 18rem;
+    height: 350px;
+    margin-bottom: 1rem; /* Add margin between cards */
+  }
+
+  .card-body h4 {
+    font-size: 18px;
+  }
+  #contact .container {
+    padding: 80px 0 80px 0;
+  }
+
+  #contact h3 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  #contact .mb-3 {
+    display: block !important; /* Override d-flex */
+    text-align: left; /* Adjust text alignment */
+  }
+
+  #contact .mb3 img {
+    display: block;
+    margin-bottom: 10px; /* Add spacing between the icon and text */
+  }
+
+  #contact a {
+    display: block; /* Ensure the text takes full width */
+  }
+
+  .kontak a {
+    width: 100%; /* Ensures links are full-width */
+  }
+
+  .company-link {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .card-maps iframe {
+    width: 100%;
+    height: 350px;
+  }
+  footer {
+    height: auto;
+    padding: 20px 0;
+    flex-direction: column;
+  }
+
+  .copyright p {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+
+/* Max width 375px */
+@media (max-width: 375px) {
+  .hero-tagline h1 {
+    font-size: 28px;
+  }
+
+  .hero-tagline h2 {
+    font-size: 20px;
+  }
+
+  .hero-tagline p {
+    font-size: 12px;
+    margin-bottom: 20px;
+    margin-top: 8px;
+    line-height: 20px;
+    width: 100%;
+  }
+
+  .button-lg-primary {
+    width: 160px;
+    height: 50px;
+    font-size: 14px;
+  }
+
+  .img-hero {
+    height: 60%;
+  }
+
+  .accent-img {
+    width: 60%;
+    height: auto;
+  }
+  #about .about-text {
+    padding-top: 20px;
+    margin-bottom: 1.5rem;
+  }
+
+  #about h2 {
+    font-size: 24px;
+  }
+
+  #about h4 {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  #about p {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  #about .img-fluid {
+    width: 90%;
+    margin-left: 0; /* Gambar diratakan ke tengah */
+  }
+
+  #about .text-center img {
+    margin-top: 10px;
+  }
+  #project h2 {
+    font-size: 24px;
+  }
+
+  #project p {
+    font-size: 16px;
+  }
+
+  .project-title {
+    padding-top: 40px;
+  }
+
+  .projectbox-head {
+    gap: 1.5rem;
+  }
+
+  .project-box {
+    width: 200px;
+    height: 200px;
+  }
+
+  .project-box .logo {
+    max-width: 60%;
+    max-height: 60%;
+  }
+  #gallery h2 {
+    font-size: 24px;
+  }
+
+  .card {
+    height: auto;
+  }
+
+  .card-body h4 {
+    font-size: 16px;
+  }
+
+  .card-logo img {
+    max-width: 60%;
+  }
+  #contact .container {
+    padding: 60px 0 60px 0;
+  }
+
+  #contact h3 {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  #contact .mb-3 {
+    display: block !important; /* Override d-flex */
+    text-align: left; /* Adjust text alignment */
+  }
+
+  #contact .mb3 img {
+    display: block;
+    margin-bottom: 10px; /* Add spacing between the icon and text */
+  }
+
+  #contact a {
+    display: block; /* Ensure the text takes full width */
+  }
+
+  .kontak a {
+    font-size: 16px;
+    line-height: 24px;
+    width: 100%; /* Ensures links are full-width */
+    margin-left: 0;
+  }
+
+  .company-link {
+    font-size: 14px;
+    line-height: 20px;
+    display: block;
+    margin-top: 10px;
+  }
+
+  .card-maps iframe {
+    width: 100%;
+    height: 300px;
+  }
+
+  .copyright p {
+    font-size: 10px;
+    line-height: 18px;
+  }
+}
+
+@media (max-width : 320px) {
+    #project h2 {
+        font-size: 20px;
+      }
+    
+      #project p {
+        font-size: 12px;
+      }
+    
+      .project-title {
+        padding-top: 20px;
+      }
+    
+      .projectbox-head {
+        gap: 1rem;
+      }
+    
+      .project-box {
+        width: 150px;
+        height: 150px;
+      }
+    
+      .project-box .logo {
+        max-width: 50%;
+        max-height: 50%;
+      }
+}
+
+@media (max-width : 390px) {
+    .d-flex {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center the cards */
+    }
+
+    .card {
+        width: 100%; /* Make the card take the full width */
+        margin-bottom: 15px; /* Add spacing between the cards */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+@media (max-width : 414px) {
+    .d-flex {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center the cards */
+    }
+
+    .card {
+        width: 100%; /* Make the card take the full width */
+        margin-bottom: 15px; /* Add spacing between the cards */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+@media (max-width : 430px) {
+    .d-flex {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center the cards */
+    }
+
+    .card {
+        width: 100%; /* Make the card take the full width */
+        margin-bottom: 15px; /* Add spacing between the cards */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+@media (max-width : 540px) {
+    .d-flex {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center the cards */
+    }
+
+    .card {
+        width: 100%; /* Make the card take the full width */
+        margin-bottom: 15px; /* Add spacing between the cards */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
